@@ -80,5 +80,8 @@ Default/Current Channel setup (available under Vehicle setup > Flight modes):
 + Channel 8: Disengaged: Flight mode 1 (Position)
              Engaged: Flight mode 6 (Hold)
 
+### User Guides
+
 [QGroundControl User Guide](https://docs.qgroundcontrol.com/master/en/)
+
 [Pixhawk 4 User Guide](https://docs.px4.io/main/en/hardware/drone_parts.html)
