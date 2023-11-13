@@ -33,15 +33,14 @@ The GPS module, FPV radio receiver, and telemetry module are connected to the Pi
 
 PID stands for Proportional-Integral-Derivative, and it is a control algorithm used in drones to stabilize and control their movements. The PID controller continuously calculates an error value as the difference between a desired setpoint and a measured process variable and applies a correction based on proportional, integral, and derivative terms. The proportional term (P) looks at the present error, the integral term (I) looks at the past error, and the derivative term (D) looks at the future error. The PID controller's primary goal in a drone is to correct the error by adjusting motor speeds. The control loop continuously reads sensor data and calculates motor speeds to minimize the error. The PID algorithm is a crucial part of the control system, and it helps to stabilize the drone and make it more responsive to user input. The gains of a PID controller can be obtained by trial and error method. PID tuning is essential to achieve stability of the drone.
 
-# Chasis
+# Chasis Design
 
-## Design
-
+To make the body of the drone lighter in order to make it capable of lifting heavier payloads, we have used the following materials:
 - Two 13x13 cm sunmica board (enacasing)
-- 4 equal size aluminium box pipes
-- 4 3D-printed legs (for takeoff and landing)
-- 1 3D-printed GPS stand
-- 2 velcro (for holding battery)
+- Four equal size aluminium box pipes
+- Four 3D-printed legs (for takeoff and landing)
+- One 3D-printed GPS stand
+- Two velcro (for holding battery)
 - Some zip-ties (for wire management)
 
 # Circuit
