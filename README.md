@@ -7,6 +7,7 @@ For now, the we have used open source codes avalable to build the drone. We have
 
 - Holybro Pixhawk 4 (Controller)
 - Holybro PM07 V2.4 (Power supply module)
+- Pixhawk 4 GPS module
 - FrSKY RX8R Pro 2.4G ACCST 8/16CH SBUS Telemetry Recevier
 - 3dr 500mW Radio Telemetry (Air & Ground modules)
 - Emax Mt2213-935kv Brushless motors
@@ -20,7 +21,17 @@ For now, the we have used open source codes avalable to build the drone. We have
 
 # Working Idea
 
-Using available senory modules, i.e. GPS, Accelerometer, Compass, to calculate optimal power input for the fan motors. While allowing for user input to change flight paramaters.
+The working principle of a drone involves the interaction of various components. The flight controller, which is the "brain" of the drone, receives control signals from the human or flight computer and sends control signals to the motor to execute. The Pixhawk 4 is a flight controller that turns control signals sent by the human or flight computer into a control signal for the motor to execute. It also helps with the stability of the drone with its onboard sensor arrays, which include an accelerometer and compass. The accelerometer measures the linear acceleration in 3D and determines the tilt angle of the drone in a stationary position. It also helps drones to detect obstacles in their environment and allows them to maintain a stable hover and navigate their environment. The compass helps the drone to maintain its heading.
+
+A 12V LiPo battery is connected to the power module. The Holybro PM07 Pixhawk 4 Power Module supplies regulated 5.2V to the flight controller from the battery and provides current consumption and battery voltage measurements via analog signal through a 6 Pin JST-GH cable, along with integrated ESC power and signal distribution for up to 8 ESCs. The 4 brushless motors are connected to the power module via ESC modules, which is connected with the Pixhawk 4 with I/O communication.
+
+The GPS module, FPV radio receiver, and telemetry module are connected to the Pixhawk 4. Pixhawk 4 connected with the GPS module send real time GPS data to the flight computer (ground control). The FPV radio reciever facilitates the communication between the drone and the remote control. The telemetry module facilitates the communication between the drone and the flight computer which requires a software "QGroundControl".
+
+
+
+## PID
+
+PID stands for Proportional-Integral-Derivative, and it is a control algorithm used in drones to stabilize and control their movements. The PID controller continuously calculates an error value as the difference between a desired setpoint and a measured process variable and applies a correction based on proportional, integral, and derivative terms. The proportional term (P) looks at the present error, the integral term (I) looks at the past error, and the derivative term (D) looks at the future error. The PID controller's primary goal in a drone is to correct the error by adjusting motor speeds. The control loop continuously reads sensor data and calculates motor speeds to minimize the error. The PID algorithm is a crucial part of the control system, and it helps to stabilize the drone and make it more responsive to user input. The gains of a PID controller can be obtained by trial and error method. PID tuning is essential to achieve stability of the drone.
 
 # Chasis
 
@@ -28,8 +39,16 @@ Using available senory modules, i.e. GPS, Accelerometer, Compass, to calculate o
 
 - Two 13x13 cm sunmica board (enacasing)
 - 4 equal size aluminium box pipes
-- 
+- 4 3D-printed legs (for takeoff and landing)
+- 1 3D-printed GPS stand
+- 2 velcro (for holding battery)
+- Some zip-ties (for wire management)
 
 # Circuit
 
 ![Screenshot 2023-09-28 203558](https://github.com/CodeScythe0/Drone/assets/115811767/f2d5933e-f747-4cd8-8f19-c0e8a2d6675e)
+
+# Softwares Used
+
+- QGroundControl
+  It helps in doing all the software related configurations of the drone, which otherwise would have to be done manually.
