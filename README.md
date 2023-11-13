@@ -33,6 +33,10 @@ The GPS module, FPV radio receiver, and telemetry module are connected to the Pi
 
 The pixhawk 4 flight controller provides different flight modes. Checkout the link for details: [PX4 Flight Modes](https://docs.px4.io/main/en/flight_modes/)
 
+Generally, we use the Position, Hold and Altitude flight modes.
+
+Caution: The Manual flight mode relies fully on the radio control. It does not hold its position or altitude. So, if you are using this mode, do it on your own responsibility.
+
 ## PID
 
 PID stands for Proportional-Integral-Derivative, and it is a control algorithm used in drones to stabilize and control their movements. The PID controller continuously calculates an error value as the difference between a desired setpoint and a measured process variable and applies a correction based on proportional, integral, and derivative terms. The proportional term (P) looks at the present error, the integral term (I) looks at the past error, and the derivative term (D) looks at the future error. The PID controller's primary goal in a drone is to correct the error by adjusting motor speeds. The control loop continuously reads sensor data and calculates motor speeds to minimize the error. The PID algorithm is a crucial part of the control system, and it helps to stabilize the drone and make it more responsive to user input. The gains of a PID controller can be obtained by trial and error method. PID tuning is essential to achieve stability of the drone.
@@ -75,3 +79,6 @@ Default/Current Channel setup (available under Vehicle setup > Flight modes):
 + Channel 7: Return switch
 + Channel 8: Disengaged: Flight mode 1 (Position)
              Engaged: Flight mode 6 (Hold)
+
+[QGroundControl User Guide](https://docs.qgroundcontrol.com/master/en/)
+[Pixhawk 4 User Guide](https://docs.px4.io/main/en/hardware/drone_parts.html)
