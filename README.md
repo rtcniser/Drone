@@ -29,6 +29,10 @@ The GPS module, FPV radio receiver, and telemetry module are connected to the Pi
 
 ![Image](https://github.com/Sandipan04/Drone/blob/main/Screenshot_20231113_194938.png?raw=true)
 
+## Flight Modes:
+
+The pixhawk 4 flight controller provides different flight modes. Checkout the link for details: [PX4 Flight Modes](https://docs.px4.io/main/en/flight_modes/)
+
 ## PID
 
 PID stands for Proportional-Integral-Derivative, and it is a control algorithm used in drones to stabilize and control their movements. The PID controller continuously calculates an error value as the difference between a desired setpoint and a measured process variable and applies a correction based on proportional, integral, and derivative terms. The proportional term (P) looks at the present error, the integral term (I) looks at the past error, and the derivative term (D) looks at the future error. The PID controller's primary goal in a drone is to correct the error by adjusting motor speeds. The control loop continuously reads sensor data and calculates motor speeds to minimize the error. The PID algorithm is a crucial part of the control system, and it helps to stabilize the drone and make it more responsive to user input. The gains of a PID controller can be obtained by trial and error method. PID tuning is essential to achieve stability of the drone.
@@ -50,4 +54,24 @@ To make the body of the drone lighter in order to make it capable of lifting hea
 # Softwares Used
 
 - QGroundControl
+  
   It helps in doing all the software related configurations of the drone, which otherwise would have to be done manually.
+
+## Steps for configuration
+
+- Connect the pixhawk 4 with computer (where QGroundControl is installed) and open the QgroundControl application.
+- Go to vehicle setup, update/load firmware: PX4 flight stack.
+- For Airframe, here, we have selected the Generic Quadcopter. You may select according to your drone design.
+- Calibrate the radio and other sensor (Detailed instructions on how to calibrate are provided within the app).
+- Check if all the motors are working properly from Vehicle setup > Motors.
+
+Default/Current Channel setup (available under Vehicle setup > Flight modes):
++ Channel 1: Left/Right motion
++ Channel 2: Forward/Backward motion
++ Channel 3: Thrust
++ Channel 4: Rotation
++ Channel 5: Kill switch
++ Channel 6: Flight Arm switch
++ Channel 7: Return switch
++ Channel 8: Disengaged: Flight mode 1 (Position)
+             Engaged: Flight mode 6 (Hold)
