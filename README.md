@@ -27,21 +27,28 @@ A 12V LiPo battery is connected to the power module. The Holybro PM07 Pixhawk 4 
 
 The GPS module, FPV radio receiver, and telemetry module are connected to the Pixhawk 4. Pixhawk 4 connected with the GPS module send real time GPS data to the flight computer (ground control). The FPV radio reciever facilitates the communication between the drone and the remote control. The telemetry module facilitates the communication between the drone and the flight computer which requires a software "QGroundControl".
 
+![Image](https://github.com/Sandipan04/Drone/blob/main/Screenshot_20231113_194938.png?raw=true)
 
+## Flight Modes:
+
+The pixhawk 4 flight controller provides different flight modes. Checkout the link for details: [PX4 Flight Modes](https://docs.px4.io/main/en/flight_modes/)
+
+Generally, we use the Position, Hold and Altitude flight modes.
+
+Caution: The Manual flight mode relies fully on the radio control. It does not hold its position or altitude. So, if you are using this mode, do it on your own responsibility.
 
 ## PID
 
 PID stands for Proportional-Integral-Derivative, and it is a control algorithm used in drones to stabilize and control their movements. The PID controller continuously calculates an error value as the difference between a desired setpoint and a measured process variable and applies a correction based on proportional, integral, and derivative terms. The proportional term (P) looks at the present error, the integral term (I) looks at the past error, and the derivative term (D) looks at the future error. The PID controller's primary goal in a drone is to correct the error by adjusting motor speeds. The control loop continuously reads sensor data and calculates motor speeds to minimize the error. The PID algorithm is a crucial part of the control system, and it helps to stabilize the drone and make it more responsive to user input. The gains of a PID controller can be obtained by trial and error method. PID tuning is essential to achieve stability of the drone.
 
-# Chasis
+# Chasis Design
 
-## Design
-
+To make the body of the drone lighter in order to make it capable of lifting heavier payloads, we have used the following materials:
 - Two 13x13 cm sunmica board (enacasing)
-- 4 equal size aluminium box pipes
-- 4 3D-printed legs (for takeoff and landing)
-- 1 3D-printed GPS stand
-- 2 velcro (for holding battery)
+- Four equal size aluminium box pipes
+- Four 3D-printed legs (for takeoff and landing)
+- One 3D-printed GPS stand
+- Two velcro (for holding battery)
 - Some zip-ties (for wire management)
 
 # Circuit
@@ -51,4 +58,30 @@ PID stands for Proportional-Integral-Derivative, and it is a control algorithm u
 # Softwares Used
 
 - QGroundControl
+  
   It helps in doing all the software related configurations of the drone, which otherwise would have to be done manually.
+
+## Steps for configuration
+
+- Connect the pixhawk 4 with computer (where QGroundControl is installed) and open the QgroundControl application.
+- Go to vehicle setup, update/load firmware: PX4 flight stack.
+- For Airframe, here, we have selected the Generic Quadcopter. You may select according to your drone design.
+- Calibrate the radio and other sensor (Detailed instructions on how to calibrate are provided within the app).
+- Check if all the motors are working properly from Vehicle setup > Motors.
+
+Default/Current Channel setup (available under Vehicle setup > Flight modes):
++ Channel 1: Left/Right motion
++ Channel 2: Forward/Backward motion
++ Channel 3: Thrust
++ Channel 4: Rotation
++ Channel 5: Kill switch
++ Channel 6: Flight Arm switch
++ Channel 7: Return switch
++ Channel 8: Disengaged: Flight mode 1 (Position)
+             Engaged: Flight mode 6 (Hold)
+
+### User Guides
+
+[QGroundControl User Guide](https://docs.qgroundcontrol.com/master/en/)
+
+[Pixhawk 4 User Guide](https://docs.px4.io/main/en/hardware/drone_parts.html)
