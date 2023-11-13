@@ -27,7 +27,7 @@ A 12V LiPo battery is connected to the power module. The Holybro PM07 Pixhawk 4 
 
 The GPS module, FPV radio receiver, and telemetry module are connected to the Pixhawk 4. Pixhawk 4 connected with the GPS module send real time GPS data to the flight computer (ground control). The FPV radio reciever facilitates the communication between the drone and the remote control. The telemetry module facilitates the communication between the drone and the flight computer which requires a software "QGroundControl".
 
-
+![Image](https://github.com/Sandipan04/Drone/blob/main/Screenshot_20231113_194938.png?raw=true)
 
 ## PID
 
