@@ -88,7 +88,7 @@ Default/Current Channel setup (available under Vehicle setup > Flight modes):
 
 # Members
 Sourav Mahato - Development  
-Krishna Kant PArida - Development  
+Krishna Kant Parida - Development  
 [Aritra Mukhopadhyay](https://github.com/PeithonKing) - Development, User  
 [Sandipan Samanta](https://github.com/Sandipan04) - Maintenance, User, Documentation  
 [Vishal Meena](https://github.com/CodeScythe0) - Maintenance, User, Documentation  
