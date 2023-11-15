@@ -87,8 +87,8 @@ Default/Current Channel setup (available under Vehicle setup > Flight modes):
 [Pixhawk 4 User Guide](https://docs.px4.io/main/en/hardware/drone_parts.html)
 
 # Members
-Sourav Mahato - Development
-Krishna Kant PArida - Development
-[Aritra Mukhopadhyay](https://github.com/PeithonKing) - Development, User
-[Sandipan Samanta](https://github.com/Sandipan04) - Maintenance, User, Documentation
-[Vishal Meena](https://github.com/CodeScythe0) - Maintenance, User, Documentation
+Sourav Mahato - Development  
+Krishna Kant PArida - Development  
+[Aritra Mukhopadhyay](https://github.com/PeithonKing) - Development, User  
+[Sandipan Samanta](https://github.com/Sandipan04) - Maintenance, User, Documentation  
+[Vishal Meena](https://github.com/CodeScythe0) - Maintenance, User, Documentation  
